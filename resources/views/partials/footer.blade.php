@@ -139,25 +139,3 @@
         </div>
     </footer>
 
-    <script>
-        // Newsletter subscription
-        document.querySelector('button').addEventListener('click', function() {
-            const email = document.querySelector('input[type="email"]').value;
-            if (email) {
-                alert('Terima kasih! Anda telah berlangganan newsletter MAM Limpung.');
-                document.querySelector('input[type="email"]').value = '';
-            } else {
-                alert('Mohon masukkan alamat email yang valid.');
-            }
-        });
-
-        // Add floating animation to social media icons
-        document.querySelectorAll('.group').forEach(icon => {
-            icon.addEventListener('mouseenter', function() {
-                this.classList.add('animate-pulse');
-            });
-            icon.addEventListener('mouseleave', function() {
-                this.classList.remove('animate-pulse');
-            });
-        });
-    </script>

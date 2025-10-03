@@ -1,388 +1,67 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Loading Screen</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes slideInFromTop {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInFromBottom {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideOutToTop {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-100%);
-            }
-        }
-
-        @keyframes slideOutToBottom {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(100%);
-            }
-        }
-
-        @keyframes logoRotate {
-            from {
-                transform: rotate(0deg) scale(0.8);
-            }
-            to {
-                transform: rotate(360deg) scale(1);
-            }
-        }
-
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.8) translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        @keyframes progressBar {
-            from {
-                width: 0%;
-            }
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes textGlow {
-            0%, 100% {
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-            }
-            50% {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-            }
-        }
-
-        .loader-enter {
-            animation: slideInFromTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .loader-enter-bottom {
-            animation: slideInFromBottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .loader-exit {
-            animation: slideOutToTop 0.8s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
-        }
-
-        .loader-exit-bottom {
-            animation: slideOutToBottom 0.8s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
-        }
-
-        .logo-animation {
-            animation: logoRotate 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
-        }
-
-        .content-fade-in {
-            animation: fadeInScale 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
-        }
-
-        .progress-fill {
-            animation: progressBar 2s ease-out forwards;
-        }
-
-        .text-glow {
-            animation: textGlow 2s ease-in-out infinite;
-        }
-
-        .loading-container {
-            backdrop-filter: blur(10px);
-        }
-    </style>
-</head>
-<body class="bg-gray-50 font-sans">
-    <!-- Loading Screen -->
-    <div id="loadingScreen" class="fixed inset-0 z-50 loading-container hidden">
-        <!-- Top Panel -->
-        <div id="topPanel" class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-end justify-center overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
-            <div class="relative z-10 pb-8">
-                <!-- Logo Container -->
-                <div class="flex justify-center mb-6">
-                    <div class="relative">
-                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl logo-animation">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
+<section class="w-full p-5 flex justify-center">
+    <div class="max-w-6xl w-full flex flex-col gap-6">
+        {{-- Container Box Kiri dan Kanan --}}
+        <div class="flex flex-col lg:flex-row gap-6">
+            {{-- Box Kiri berisi Gambar --}}
+            <div class="w-full lg:w-1/2">
+                <img id="extraImage" src="" alt="Ekstrakurikuler" class="w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-700 ease-in-out">
+            </div>
+            
+            {{-- Box Kanan berisi Konten Extra --}}
+            <div class="w-full lg:w-1/2 flex flex-col">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex-grow overflow-hidden">
+                    <div id="extraContent" class="transition-all duration-500 ease-in-out">
+                        <h2 id="extraTitle" class="text-3xl font-extrabold text-gray-900 mb-3 transition-all duration-500"></h2>
+                        <p id="extraDesc" class="text-gray-700 mb-4 leading-relaxed transition-all duration-500"></p>
+                        <div id="extraSocial" class="flex gap-3 transition-all duration-500">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 transition">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="#" class="text-pink-600 hover:text-pink-800 transition">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
                         </div>
-                        <div class="absolute -inset-2 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl opacity-20 animate-pulse"></div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Bottom Panel -->
-        <div id="bottomPanel" class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-900 flex items-start justify-center overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-blue-900/20 to-slate-900/20"></div>
-            <div class="relative z-10 pt-8 text-center">
-                <!-- Loading Text -->
-                <h2 class="text-white text-2xl font-light mb-6 text-glow tracking-wider hidden">
-                    <span id="loadingText">Memuat</span>
-                    <span class="inline-block w-6 text-left">
-                        <span id="dots" class="animate-pulse">...</span>
-                    </span>
-                </h2>
-                
-                <!-- Progress Bar -->
-                <div class="w-64 mx-auto">
-                    <div class="h-1 bg-slate-700 rounded-full overflow-hidden">
-                        <div id="progressBar" class="h-full bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 rounded-full shadow-lg progress-fill"></div>
-                    </div>
-                    <p class="text-slate-400 text-sm mt-3 font-light " id="progressText">Menyiapkan halaman...</p>
+        
+        {{-- Navigasi Box Chevron di Bawah - Ditengah --}}
+        <div class="flex flex-wrap justify-center items-center gap-0">
+            <button onclick="selectExtra(0)" class="extra-nav group relative bg-blue-500 hover:bg-blue-600 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 5;">
+                <div class="flex items-center justify-center gap-2 pl-4 pr-6 py-3">
+                    <i id="extraIcon0" class=""></i>
+                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle0"></span>
                 </div>
-            </div>
+            </button>
+            
+            <button onclick="selectExtra(1)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 4;">
+                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
+                    <i id="extraIcon1" class=""></i>
+                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle1"></span>
+                </div>
+            </button>
+            
+            <button onclick="selectExtra(2)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 3;">
+                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
+                    <i id="extraIcon2" class=""></i>
+                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle2"></span>
+                </div>
+            </button>
+            
+            <button onclick="selectExtra(3)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 2;">
+                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
+                    <i id="extraIcon3" class=""></i>
+                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle3"></span>
+                </div>
+            </button>
+            
+            <button onclick="selectExtra(4)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 1;">
+                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
+                    <i id="extraIcon4" class=""></i>
+                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle4"></span>
+                </div>
+            </button>
         </div>
     </div>
-
-    <!-- Main Content -->
-    <div id="mainContent" class="min-h-screen">
-        <!-- Header -->
-        <header class="bg-white shadow-sm border-b border-gray-100">
-            <div class="max-w-6xl mx-auto px-6 py-4">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-semibold text-gray-900">WebPro</span>
-                    </div>
-                    <nav class="hidden md:flex space-x-8">
-                        <button onclick="navigatePage('home')" class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium">Beranda</button>
-                        <button onclick="navigatePage('about')" class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium">Tentang</button>
-                        <button onclick="navigatePage('services')" class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium">Layanan</button>
-                        <button onclick="navigatePage('contact')" class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium">Kontak</button>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-        <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
-            <div class="max-w-6xl mx-auto px-6 text-center">
-                <h1 class="text-5xl md:text-6xl font-light mb-6 leading-tight">
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Pengalaman Digital
-                    </span>
-                    <br>yang Menakjubkan
-                </h1>
-                <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Website profesional dengan animasi loading yang elegant dan performa tinggi untuk memberikan kesan pertama yang luar biasa.
-                </p>
-                <button onclick="navigatePage('demo')" 
-                        class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    Lihat Demo Loading
-                </button>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-light text-gray-900 mb-6">Fitur Unggulan</h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Loading screen yang dirancang khusus untuk memberikan pengalaman pengguna yang optimal
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="group text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100 transition-all duration-300">
-                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Super Cepat</h3>
-                        <p class="text-gray-600 leading-relaxed">Animasi yang dioptimalkan untuk performa tinggi tanpa mengurangi kualitas visual</p>
-                    </div>
-
-                    <div class="group text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 transition-all duration-300">
-                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Desain Elegan</h3>
-                        <p class="text-gray-600 leading-relaxed">Interface yang modern dan profesional dengan attention to detail yang tinggi</p>
-                    </div>
-
-                    <div class="group text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 hover:from-green-100 hover:to-teal-100 transition-all duration-300">
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">User Friendly</h3>
-                        <p class="text-gray-600 leading-relaxed">Pengalaman pengguna yang intuitif dengan feedback visual yang jelas</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Demo Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="text-4xl font-light text-gray-900 mb-6">Coba Loading Animation</h2>
-                <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Klik tombol di bawah untuk melihat berbagai varian loading screen dalam aksi
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <button onclick="navigatePage('home')" 
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        Load Beranda
-                    </button>
-                    <button onclick="navigatePage('about')" 
-                            class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        Load Tentang
-                    </button>
-                    <button onclick="navigatePage('services')" 
-                            class="bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        Load Layanan
-                    </button>
-                    <button onclick="navigatePage('contact')" 
-                            class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        Load Kontak
-                    </button>
-                </div>
-            </div>
-        </section>
-    </div>
-
-<script>
-    class LoadingManager {
-        constructor() {
-            this.isLoading = false;
-            this.loadingScreen = document.getElementById('loadingScreen');
-            this.topPanel = document.getElementById('topPanel');
-            this.bottomPanel = document.getElementById('bottomPanel');
-            this.mainContent = document.getElementById('mainContent');
-            this.progressBar = document.getElementById('progressBar');
-            this.progressText = document.getElementById('progressText');
-            
-            this.messages = [
-                'Menyiapkan halaman...',
-                'Memuat konten...',
-                'Hampir selesai...',
-                'Siap!'
-            ];
-            
-            this.init();
-        }
-
-        init() {
-            // Saat DOM masih loading → tampilkan loading
-            if (document.readyState === 'loading') {
-                this.showLoading();
-                document.addEventListener("DOMContentLoaded", () => {
-                    // DOM sudah siap, tapi belum semua asset (gambar, CSS, dsb)
-                    this.progressText.textContent = "Memuat gambar & asset...";
-                });
-            }
-
-            // Saat semua sudah loaded (gambar, css, js, dsb)
-            window.addEventListener("load", () => {
-                this.hideLoading();
-            });
-        }
-
-        showLoading() {
-            if (this.isLoading) return;
-            this.isLoading = true;
-
-            this.resetAnimations();
-
-            this.loadingScreen.classList.remove('hidden');
-            this.mainContent.style.opacity = '0.3';
-
-            this.topPanel.classList.add('loader-enter');
-            this.bottomPanel.classList.add('loader-enter-bottom');
-
-            this.progressBar.style.animation = 'none';
-            this.progressBar.offsetHeight; // force reflow
-            this.progressBar.style.animation = `progressBar 3s ease-out forwards`;
-
-            this.updateLoadingMessages(3000);
-        }
-
-        hideLoading() {
-            this.topPanel.classList.remove('loader-enter');
-            this.topPanel.classList.add('loader-exit');
-
-            this.bottomPanel.classList.remove('loader-enter-bottom');
-            this.bottomPanel.classList.add('loader-exit-bottom');
-
-            setTimeout(() => {
-                this.mainContent.style.opacity = '1';
-                this.mainContent.style.transition = 'opacity 0.5s ease-out';
-            }, 300);
-
-            setTimeout(() => {
-                this.loadingScreen.classList.add('hidden');
-                this.isLoading = false;
-                this.resetAnimations();
-            }, 800);
-        }
-
-        resetAnimations() {
-            this.topPanel.className = 'absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-end justify-center overflow-hidden';
-            this.bottomPanel.className = 'absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-900 flex items-start justify-center overflow-hidden';
-        }
-
-        updateLoadingMessages(duration) {
-            const interval = duration / this.messages.length;
-            this.messages.forEach((message, index) => {
-                setTimeout(() => {
-                    this.progressText.textContent = message;
-                }, interval * index);
-            });
-        }
-    }
-
-    // Init
-    const loadingManager = new LoadingManager();
-
-    // Contoh navigate
-    function navigatePage(page) {
-        loadingManager.showLoading();
-        // Misal load page via AJAX
-        fetch(page + ".html")
-            .then(r => r.text())
-            .then(html => {
-                document.getElementById("mainContent").innerHTML = html;
-                loadingManager.hideLoading();
-            });
-    }
-</script>
-
-</body>
-</html>
+</section>

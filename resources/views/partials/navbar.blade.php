@@ -95,7 +95,7 @@
         
             <div class="flex flex-col sm:flex-row justify-between items-center text-sm space-y-2 sm:space-y-0">
                 <!-- Social Links -->
-                <div class="flex items-center justify-end gap-3 px-5 bg-amber-500 h-full py-2 w-[30%]">
+                <div class="flex items-center justify-end gap-3 px-5 bg-amber-500 h-full py-2 w-[30%] rounded-br-3xl">
                     <p class="flex items-center space-x-1">
                         Follow Link : 
                     </p>
@@ -111,7 +111,7 @@
                 </div>
                 
                 <!-- Contact Info -->
-                <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left w-full sm:w-[70%] gap-5 px-5 py-2">
+                <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left w-full sm:w-[70%] gap-5 px-5 py-2 rounded-tl-3xl">
                     <span class="flex items-center">
                         <i class="fa-solid fa-location-dot mr-2"></i>
                         <span class="text-xs sm:text-sm">Jl. Cokronegoro No.34, Gepor, Limpung</span>
@@ -146,10 +146,15 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
+
                     <a href="#" class="text-gray-700 hover:text-eduka-green transition-colors font-medium">Beranda</a>
+
+                    {{-- <a href="#" class="text-gray-700 hover:text-eduka-green transition-colors font-medium">Visi - Misi</a> --}}
+
+                    <a href="#" class="text-gray-700 hover:text-eduka-green transition-colors font-medium">Profile</a>
                     
                     <!-- Courses Dropdown -->
-                    <div class="relative group">
+                    {{-- <div class="relative group">
                         <button class="text-gray-700 hover:text-eduka-green transition-colors font-medium flex items-center space-x-1">
                             <span>Courses</span>
                             <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,10 +169,10 @@
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Marketing</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Academics Dropdown -->
-                    <div class="relative group">
+                    {{-- <div class="relative group">
                         <button class="text-gray-700 hover:text-eduka-green transition-colors font-medium flex items-center space-x-1">
                             <span>Academics</span>
                             <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,15 +181,15 @@
                         </button>
                         <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2">
                             <div class="py-2">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Undergraduate</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Graduate</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Doctoral</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Alumni</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Study</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Data Siswa</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Pages Dropdown -->
-                    <div class="relative group">
+                    {{-- <div class="relative group">
                         <button class="text-gray-700 hover:text-eduka-green transition-colors font-medium flex items-center space-x-1">
                             <span>Pages</span>
                             <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -199,10 +204,10 @@
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Gallery</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Admissions Dropdown -->
-                    <div class="relative group">
+                    {{-- <div class="relative group">
                         <button class="text-gray-700 hover:text-eduka-green transition-colors font-medium flex items-center space-x-1">
                             <span>Admissions</span>
                             <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -216,12 +221,12 @@
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-eduka-green">Scholarships</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Blog Dropdown -->
                     <div class="relative group">
                         <button class="text-gray-700 hover:text-eduka-green transition-colors font-medium flex items-center space-x-1">
-                            <span>Blog</span>
+                            <p>Blog</p>
                             <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -235,7 +240,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="text-gray-700 hover:text-eduka-green transition-colors font-medium">Contact</a>
+                    {{-- <a href="#" class="text-gray-700 hover:text-eduka-green transition-colors font-medium">Contact</a> --}}
                     
                     <!-- CTA Button -->
                     <a href="#" class="bg-gradient-to-r from-amber-400 to-amber-600 text-white px-6 py-2 rounded-br-full rounded-tr-full rounded-tl-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
