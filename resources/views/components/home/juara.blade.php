@@ -1,4 +1,5 @@
-<section class="py-16 px-4 md:px-8 lg:px-16">
+    
+    <section class="py-16 px-4 md:px-8 lg:px-16">
         <div class="max-w-7xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-12">
@@ -78,8 +79,8 @@
                     <div class=" rounded-2xl overflow-hidden">
                         <div class="aspect-square flex  justify-center p-4 items-start">
                             <img src="{{ asset('assets/img/juara.png') }}" 
-                                 alt="Students celebrating achievement" 
-                                 class="w-full lg:w-[90%] h-auto object-cover rounded-xl">
+                                    alt="Students celebrating achievement" 
+                                    class="w-full lg:w-[90%] h-auto object-cover rounded-xl">
                         </div>
                     </div>
                 </div>
