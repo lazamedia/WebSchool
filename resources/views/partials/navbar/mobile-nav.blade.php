@@ -90,7 +90,7 @@
 
     <!-- Sidebar Footer -->
     <div class="border-t border-gray-100 p-4">
-        <a href="#" class="block w-full text-center bg-gradient-to-r from-amber-400 to-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+        <a href="{{ route ('ppdb') }}" class="block w-full text-center bg-gradient-to-r from-amber-400 to-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
             PPDB Online
         </a>
     </div>

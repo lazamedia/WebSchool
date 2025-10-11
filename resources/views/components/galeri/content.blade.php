@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-white">
       
       <!-- Box 1 - Workshop Coding -->
-      <div class="gallery-box relative group overflow-hidden rounded-br-2xl rounded-tl-2xl shadow-lg cursor-pointer" data-gallery="workshop">
+      <div class="gallery-box relative group overflow-hidden  shadow-lg cursor-pointer" data-gallery="workshop">
         <img
           src="{{ asset('assets/img/school.png') }}"
           alt="Workshop Coding 2025"
@@ -19,7 +19,7 @@
       </div>
 
       <!-- Box 2 - Lomba Cerdas Cermat -->
-      <div class="gallery-box relative group overflow-hidden rounded-br-2xl rounded-tl-2xl shadow-lg cursor-pointer" data-gallery="lomba">
+      <div class="gallery-box relative group overflow-hidden  shadow-lg cursor-pointer" data-gallery="lomba">
         <img
           src="{{ asset('assets/img/school.png') }}"
           alt="Lomba Cerdas Cermat"
@@ -34,7 +34,7 @@
       </div>
 
       <!-- Box 3 - Ekstrakurikuler Pramuka -->
-      <div class="gallery-box relative group overflow-hidden rounded-br-2xl rounded-tl-2xl shadow-lg cursor-pointer" data-gallery="pramuka">
+      <div class="gallery-box relative group overflow-hidden  shadow-lg cursor-pointer" data-gallery="pramuka">
         <img
           src="{{ asset('assets/img/school.png') }}"
           alt="Ekstrakurikuler Pramuka"
@@ -49,7 +49,7 @@
       </div>
 
       <!-- Box 4 - Kegiatan Sosial -->
-      <div class="gallery-box relative group overflow-hidden rounded-br-2xl rounded-tl-2xl shadow-lg cursor-pointer" data-gallery="sosial">
+      <div class="gallery-box relative group overflow-hidden  shadow-lg cursor-pointer" data-gallery="sosial">
         <img
           src="{{ asset('assets/img/school.png') }}"
           alt="Kegiatan Sosial 2025"
