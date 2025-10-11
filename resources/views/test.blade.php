@@ -1,67 +1,244 @@
-<section class="w-full p-5 flex justify-center">
-    <div class="max-w-6xl w-full flex flex-col gap-6">
-        {{-- Container Box Kiri dan Kanan --}}
-        <div class="flex flex-col lg:flex-row gap-6">
-            {{-- Box Kiri berisi Gambar --}}
-            <div class="w-full lg:w-1/2">
-                <img id="extraImage" src="" alt="Ekstrakurikuler" class="w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-700 ease-in-out">
-            </div>
-            
-            {{-- Box Kanan berisi Konten Extra --}}
-            <div class="w-full lg:w-1/2 flex flex-col">
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex-grow overflow-hidden">
-                    <div id="extraContent" class="transition-all duration-500 ease-in-out">
-                        <h2 id="extraTitle" class="text-3xl font-extrabold text-gray-900 mb-3 transition-all duration-500"></h2>
-                        <p id="extraDesc" class="text-gray-700 mb-4 leading-relaxed transition-all duration-500"></p>
-                        <div id="extraSocial" class="flex gap-3 transition-all duration-500">
-                            <a href="#" class="text-blue-600 hover:text-blue-800 transition">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            </a>
-                            <a href="#" class="text-pink-600 hover:text-pink-800 transition">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            </a>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <section class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">Formulir Pendaftaran Siswa Baru</h1>
+            <p class="text-gray-600 text-sm sm:text-base">Silakan lengkapi data diri Anda dengan benar dan lengkap</p>
+        </div>
+
+        <!-- Form Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 sm:p-8">
+            <form id="registrationForm">
+                <!-- Row 1: Personal Data & Photo -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    <!-- Left Column: Personal Inputs -->
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap *</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">NISN *</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Masukkan NISN" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nomor HP *</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Contoh: 08123456789" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="contoh@email.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Photo Upload -->
+                    <div class="p-4 lg:p-8">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Foto Siswa *</label>
+                        <div id="dropZone" class="h-full min-h-[280px] border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer hover:border-blue-500 transition-colors bg-gray-50">
+                            <svg class="w-12 h-12 text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <p class="text-gray-600 text-sm mb-1">Seret & lepas foto di sini</p>
+                            <p class="text-gray-400 text-xs mb-3">atau</p>
+                            <button type="button" class="px-6 py-2  rounded text-sm text-gray-500 hover:border-blue-500 hover:text-blue-500 border border-gray-500">Pilih File</button>
+                            <input type="file" id="fileInput" class="hidden" accept="image/*">
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Row 2: Gender, Birth Place & Date -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-6 mb-6">
+                    <!-- Gender -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Jenis Kelamin *</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="flex items-center justify-center  border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                                <input type="radio" name="gender" value="L" class="hidden peer" required>
+                                <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                    Laki-laki
+                                </div>
+                            </label>
+                            <label class="flex items-center justify-center  border-2  border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                                <input type="radio" name="gender" value="P" class="hidden peer" required>
+                                <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                    Perempuan
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Birth Place -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tempat Lahir *</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Kota kelahiran" required>
+                    </div>
+
+                    <!-- Birth Date -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tanggal Lahir *</label>
+                        <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" required>
+                    </div>
+                </div>
+
+                <!-- Row 3: Parent Names -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nama Ayah Kandung *</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Nama lengkap ayah" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nama Ibu Kandung *</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Nama lengkap ibu" required>
+                    </div>
+                </div>
+
+                <!-- Row 4: Address -->
+                <div class="mb-6 flex flex-col lg:flex-row items-center w-full gap-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2 w-full lg:w-48">Alamat Lengkap *</label>
+                    <textarea rows="3" class="w-full flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none " placeholder="Masukkan alamat lengkap" required></textarea>
+                </div>
+
+                <!-- Row 5: School Origin & Name -->
+                <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-6">
+                    {{-- <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Lulusan *</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <label class="flex items-center justify-center border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                                <input type="radio" name="school_type" value="MTS" class="hidden peer" required>
+                                <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3 ">
+                                    MTS
+                                </div>
+                            </label>
+                            <label class="flex items-center justify-center border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                                <input type="radio" name="school_type" value="SMP" class="hidden peer" required>
+                                <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3 ">
+                                    SMP
+                                </div>
+                            </label>
+                            <label class="flex items-center justify-center border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                                <input type="radio" name="school_type" value="Lainnya" class="hidden peer" required>
+                                <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3 ">
+                                    Lainnya
+                                </div>
+                            </label>
+                        </div>
+                    </div> --}}
+                    <div class="flex flex-col lg:flex-row items-center w-full gap-4 ">
+                        <label class="block text-sm font-medium text-gray-700 w-full lg:w-48">Nama Sekolah Asal *</label>
+                        <input type="text" 
+                            class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none w-full lg:w-auto" 
+                            placeholder="Nama sekolah asal" required>
+                    </div>
+
+                </div>
+
+                <!-- Row 6: Uniform Size -->
+                <div class="mb-8 flex flex-col lg:flex-row items-center w-full gap-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2 w-full lg:w-48">Ukuran Baju Seragam *</label>
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-3 w-full flex-1">
+                        <label class="flex items-center justify-center  border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                            <input type="radio" name="size" value="S" class="hidden peer" required>
+                            <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                S
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-center  border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                            <input type="radio" name="size" value="M" class="hidden peer" required>
+                            <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                M
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-center  border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                            <input type="radio" name="size" value="L" class="hidden peer" required>
+                            <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                L
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-center  border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                            <input type="radio" name="size" value="XL" class="hidden peer" required>
+                            <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                XL
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-center  border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                            <input type="radio" name="size" value="XXL" class="hidden peer" required>
+                            <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                XXL
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-center  border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                            <input type="radio" name="size" value="XXXL" class="hidden peer" required>
+                            <div class="peer-checked:bg-blue-500 peer-checked:text-white w-full text-center font-medium rounded p-3">
+                                XXXL
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-end">
+                    <button type="submit" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                        Daftar Sekarang
+                    </button>
+                </div>
+            </form>
         </div>
-        
-        {{-- Navigasi Box Chevron di Bawah - Ditengah --}}
-        <div class="flex flex-wrap justify-center items-center gap-0">
-            <button onclick="selectExtra(0)" class="extra-nav group relative bg-blue-500 hover:bg-blue-600 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 5;">
-                <div class="flex items-center justify-center gap-2 pl-4 pr-6 py-3">
-                    <i id="extraIcon0" class=""></i>
-                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle0"></span>
-                </div>
-            </button>
+    </section>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('border-blue-500', 'bg-blue-50');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('border-blue-500', 'bg-blue-50');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('border-blue-500', 'bg-blue-50');
             
-            <button onclick="selectExtra(1)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 4;">
-                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
-                    <i id="extraIcon1" class=""></i>
-                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle1"></span>
-                </div>
-            </button>
-            
-            <button onclick="selectExtra(2)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 3;">
-                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
-                    <i id="extraIcon2" class=""></i>
-                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle2"></span>
-                </div>
-            </button>
-            
-            <button onclick="selectExtra(3)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 2;">
-                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
-                    <i id="extraIcon3" class=""></i>
-                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle3"></span>
-                </div>
-            </button>
-            
-            <button onclick="selectExtra(4)" class="extra-nav group relative bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition-all duration-700 ease-in-out transform  hover:z-10" style="z-index: 1;">
-                <div class="flex items-center justify-center gap-2 pl-5 pr-6 py-3">
-                    <i id="extraIcon4" class=""></i>
-                    <span class="text-white font-bold text-sm whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-700 ease-in-out overflow-hidden extra-title-span ml-0 group-hover:ml-1" id="extraTitle4"></span>
-                </div>
-            </button>
-        </div>
-    </div>
-</section>
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                displayFileName(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                displayFileName(e.target.files[0]);
+            }
+        });
+
+        function displayFileName(file) {
+            dropZone.innerHTML = `
+                <svg class="w-12 h-12 text-green-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <p class="text-gray-700 font-medium">${file.name}</p>
+                <p class="text-gray-400 text-sm mt-2">Klik untuk mengubah foto</p>
+            `;
+        }
+
+        document.getElementById('registrationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form berhasil dikirim!');
+        });
+    </script>
+</body>
+</html>
