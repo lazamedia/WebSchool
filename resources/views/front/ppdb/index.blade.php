@@ -77,7 +77,7 @@
 
 
     <!-- Program Unggulan -->
-    <div class="max-w-5xl mx-auto p-6 md:p-8 ">
+    {{-- <div class="max-w-5xl mx-auto p-6 md:p-8 ">
 
         <h1 class="text-2xl font-bold mb-3 text-gray-700">
             <span class="text-amber-500">Program</span> Unggulan
@@ -110,7 +110,7 @@
             </li>
         </ol>
 
-    </div>
+    </div> --}}
 
 
     <!-- Timeline Pendaftaran -->
@@ -206,7 +206,7 @@
         </div>
 
     <!-- Fasilitas Madrasah -->
-        <div class="max-w-5xl mx-auto p-6 md:p-8 mb-8">
+        {{-- <div class="max-w-5xl mx-auto p-6 md:p-8 mb-8">
             <div class="flex items-center mb-6">
                 <h2 class="text-2xl font-bold text-gray-800"><span class="text-amber-500">Fasilitas</span> Madrasah</h2>
             </div>
@@ -279,23 +279,18 @@
                     <p class=" text-gray-800">Volly & Futsal</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
         <!-- Beasiswa -->
-        <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-8">
+        <div class="w-full max-w-5xl mx-auto p-6 md:p-8 mb-8">
             <div class="flex items-center mb-6">
-                <div class="bg-yellow-100 rounded-full p-3 mr-4">
-                    <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Program Beasiswa</h2>
+                <h2 class="text-2xl font-bold text-gray-700"><span class="text-amber-500">Program</span> Beasiswa</h2>
             </div>
             
             <div class="grid md:grid-cols-2 gap-6 mb-6">
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border-2 border-blue-200">
-                    <h3 class="text-xl font-bold text-blue-800 mb-4">🏆 Beasiswa Akademik</h3>
+                <div class="">
+                    <h3 class="text-xl  mb-4"><span class="text-gray-500 font-bold">Beasiswa</span> Akademik</h3>
                     <div class="space-y-3">
                         <div class="bg-white p-3 rounded-lg">
                             <p class="font-semibold text-gray-800">Peringkat 1</p>
@@ -316,8 +311,8 @@
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border-2 border-green-200">
-                    <h3 class="text-xl font-bold text-green-800 mb-4">💚 Beasiswa Nonakademik</h3>
+                <div class="">
+                    <h3 class="text-xl  mb-4"><span class="text-gray-500 font-bold">Beasiswa</span> Nonakademik</h3>
                     <div class="space-y-3">
                         <div class="bg-white p-3 rounded-lg">
                             <p class="font-semibold text-gray-800">Beasiswa Kader</p>
@@ -330,6 +325,101 @@
                         <div class="bg-white p-3 rounded-lg">
                             <p class="font-semibold text-gray-800">Beasiswa PIP</p>
                             <p class="text-sm text-gray-600">Program Indonesia Pintar dari pemerintah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w-full max-w-5xl mx-auto p-6 md:p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Rincian Daftar Ulang Siswa Baru</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class=" p-6 rounded-lg border-2 border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Putra</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span>Uang Syahriyah Bulan Juli 2025</span>
+                            <span class="font-semibold">Rp 175.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Atribut Madrasah</span>
+                            <span class="font-semibold">Rp 180.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>UIS Tahunan (50% dari Syahriyyah)</span>
+                            <span class="font-semibold">Rp 88.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>MATSAMA dan FORTASI IPM</span>
+                            <span class="font-semibold">Rp 120.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Seragam Batik</span>
+                            <span class="font-semibold">Rp 110.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Seragam Hizbul Wathan</span>
+                            <span class="font-semibold">Rp 195.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Buku Literasi</span>
+                            <span class="font-semibold">Rp 10.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Map Raport</span>
+                            <span class="font-semibold">Rp 35.000</span>
+                        </div>
+                        <div class="border-t-2 border-blue-300 my-2"></div>
+                        <div class="flex justify-between font-bold text-lg text-blue-800">
+                            <span>Total</span>
+                            <span>Rp 913.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-amber-200">
+                    <h3 class="text-xl font-bold text-amber-800 mb-4">Putri</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span>Uang Syahriyah Bulan Juli 2025</span>
+                            <span class="font-semibold">Rp 175.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Atribut Madrasah</span>
+                            <span class="font-semibold">Rp 180.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>UIS Tahunan (50% dari Syahriyyah)</span>
+                            <span class="font-semibold">Rp 88.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>MATSAMA dan FORTASI IPM</span>
+                            <span class="font-semibold">Rp 120.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Seragam Batik</span>
+                            <span class="font-semibold">Rp 110.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Seragam Hizbul Wathan</span>
+                            <span class="font-semibold">Rp 195.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Buku Literasi</span>
+                            <span class="font-semibold">Rp 10.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Map Raport</span>
+                            <span class="font-semibold">Rp 35.000</span>
+                        </div>
+                        <div class="border-t-2 border-amber-300 my-2"></div>
+                        <div class="flex justify-between font-bold text-lg text-amber-800">
+                            <span>Total</span>
+                            <span>Rp 913.000</span>
                         </div>
                     </div>
                 </div>
