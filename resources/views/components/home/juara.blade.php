@@ -14,7 +14,7 @@
                     <!-- Achievement Item 1 -->
                     <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-2 border border-gray-300">
                         <div class="flex items-start gap-4">
-                            <div class="border border-gray-300 rounded-lg p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center shadow-md">
+                            <div class=" p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center ">
                                 <span class="text-xs text-gray-700 uppercase">Juara</span>
                                 <span class="text-3xl text-blue-600 font-bold -mt-1">1</span>
                             </div>
@@ -28,7 +28,7 @@
                     <!-- Achievement Item 2 -->
                     <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-2 border border-gray-300">
                         <div class="flex items-start gap-4">
-                            <div class="border border-gray-300 rounded-lg p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center shadow-md">
+                            <div class=" p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center ">
                                 <span class="text-xs text-gray-700 font-semibold uppercase">Juara</span>
                                 <span class="text-3xl font-bold text-blue-600 -mt-1">2</span>
                             </div>
@@ -42,7 +42,7 @@
                     <!-- Achievement Item 3 -->
                     <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-2 border border-gray-300">
                         <div class="flex items-start gap-4">
-                            <div class="border border-gray-300 rounded-lg p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center shadow-md">
+                            <div class=" p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center ">
                                 <span class="text-xs text-gray-700 font-semibold uppercase">Juara</span>
                                 <span class="text-3xl font-bold text-blue-600 -mt-1">1</span>
                             </div>
@@ -57,7 +57,7 @@
                     <!-- Achievement Item 5 -->
                     <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-2 border border-gray-300">
                         <div class="flex items-start gap-4">
-                            <div class="border border-gray-300 rounded-lg p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center shadow-md">
+                            <div class=" p-2 flex-shrink-0 w-15 h-15 flex flex-col items-center justify-center ">
                                 <span class="text-xs text-gray-700 font-semibold uppercase">Juara</span>
                                 <span class="text-3xl font-bold text-blue-600 -mt-1">1</span>
                             </div>
@@ -69,9 +69,9 @@
                     </div>
 
                     <!-- View More Button -->
-                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 mt-6">
+                    <a href="/prestasi" class="w-full inline-block text-center bg-gray-800 hover:bg-gray-900 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 mt-6">
                         Lihat Selengkapnya
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Right Box - Welcome Image -->

@@ -132,7 +132,7 @@
                     <div class="flex flex-wrap gap-6 text-blue-200 text-sm">
                         <a href="#" class="hover:text-amber-400 transition-colors">Kebijakan Privasi</a>
                         <a href="#" class="hover:text-amber-400 transition-colors">Syarat & Ketentuan</a>
-                        <a href="#" class="hover:text-amber-400 transition-colors">Sitemap</a>
+                        <a href="/login" class="hover:text-amber-400 transition-colors">Login</a>
                     </div>
                 </div>
             </div>

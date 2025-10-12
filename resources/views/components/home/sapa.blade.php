@@ -1,7 +1,19 @@
-    <section class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <section class="bg-gray-50 py-10 mt-20 px-6 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
             <div class="flex justify-center md:order-2">
-                <img src="{{ asset('assets/img/maskot-sapa.png') }}" alt="Sekolah" class="w-3/4 md:w-full max-w-md lg:max-w-md object-contain transform transition duration-500 hover:scale-105">
+                
+                {{-- vidio youtube --}}
+                <div class="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/wYjYOFfbgfQ?si=2uFqOiloya1imxft" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                    ></iframe>
+                </div>
             </div>
 
             <div class="md:order-1">

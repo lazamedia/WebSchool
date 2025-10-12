@@ -13,7 +13,7 @@
                     <span class="font-semibold">PPDB 2025</span> - Pendaftaran Peserta Didik Baru Tahun Ajaran 2025/2026
                 </div>
                 <a href="#" 
-                    class="bg-gradient-to-r from-amber-400 to-amber-600 text-white px-4 py-2 rounded-lg font-semibold  hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 min-w-[150px] text-center">
+                    class="bg-gradient-to-r from-amber-400 to-amber-600 text-white px-4 py-2 rounded-sm font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 min-w-[150px] text-center">
                     Daftar Sekarang
                 </a>
             </div>

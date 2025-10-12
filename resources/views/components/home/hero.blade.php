@@ -1,6 +1,7 @@
     
+    
     <div class="relative h-[60vh] lg:h-[80vh] w-full">
-        <img src="{{ asset('assets/img/school.png') }}" 
+        <img src="{{ asset('assets/img/school-2.png') }}" 
             alt="" 
             class="absolute inset-0 w-full h-full object-cover opacity-40">
 

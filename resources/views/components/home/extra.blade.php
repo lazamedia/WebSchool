@@ -9,7 +9,7 @@
             
             {{-- Box Kanan berisi Konten Extra --}}
             <div class="w-full lg:w-1/2 flex flex-col">
-                <div class="bg-white p-1 lg:p-6 rounded-lg  border border-gray-200 flex-grow overflow-hidden">
+                <div class=" p-1 lg:p-6  flex-grow overflow-hidden">
                     <div id="extraContent" class="transition-all duration-500 ease-in-out">
                         <h2 id="extraTitle" class="text-3xl font-extrabold text-gray-900 mb-3 transition-all duration-500"></h2>
                         <p id="extraDesc" class="text-gray-700 mb-4 leading-relaxed transition-all duration-500"></p>

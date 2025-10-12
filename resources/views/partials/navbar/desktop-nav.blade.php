@@ -61,7 +61,7 @@
         </div>
         
         <!-- CTA Button -->
-        <a href="{{ route ('ppdb') }}" class="bg-gradient-to-r from-amber-400 to-amber-600 text-white px-6 py-2 rounded-br-full rounded-tr-full rounded-tl-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+        <a href="{{ route ('frontend.ppdb') }}" class="bg-gradient-to-r from-amber-400 to-amber-600 text-white px-6 py-2 rounded-br-full rounded-tr-full rounded-tl-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
             PPDB Online
         </a>
     </div>

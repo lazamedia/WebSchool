@@ -21,18 +21,18 @@
             </div>
             
             <!-- Contact Info -->
-            <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left w-full sm:w-[70%] gap-5 px-5 py-2 rounded-tl-3xl">
+            <div class="flex flex-row items-center justify-center text-center w-[70%] gap-10 px-5 py-2">
                 <span class="flex items-center">
                     <i class="fa-solid fa-location-dot mr-2"></i>
-                    <span class="text-xs sm:text-sm">Jl. Cokronegoro No.34, Gepor, Limpung</span>
+                    <span class="text-sm">Jl. Cokronegoro No.34, Gepor, Limpung</span>
                 </span>
                 <span class="flex items-center">
                     <i class="fa-solid fa-envelope mr-2"></i>
-                    <span class="text-xs sm:text-sm">info@mamlimpung.sch</span>
+                    <span class="text-sm">info@mamlimpung.sch</span>
                 </span>
                 <span class="flex items-center ">
                     <i class="fa-solid fa-phone mr-2"></i>
-                    <span class="text-xs sm:text-sm">+62 21 1234 5678</span>
+                    <span class="text-sm">+62 21 1234 5678</span>
                 </span>
             </div>
         </div>
